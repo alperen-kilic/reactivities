@@ -22,8 +22,8 @@ namespace API.Controllers
             throw new Exception("This is a server error");
         }
 
-        [HttpGet("unauthorised")]
-        public ActionResult GetUnauthorised()
+        [HttpGet("unauthorized")]
+        public ActionResult GetUnauthorized()
         {
             return Unauthorized();
         }
