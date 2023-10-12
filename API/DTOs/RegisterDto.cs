@@ -13,6 +13,6 @@ namespace API.DTOs
     [Required]
     public string DisplayName { get; set; }
     [Required]
-    public string Username { get; set; }
+    public string UserName { get; set; }
   }
 }
