@@ -29,7 +29,7 @@ export default class UserStore {
     runInAction(() => (this.user = user));
     router.navigate("/activities");
     store.modalStore.closeModal();
-  }; 
+  };
 
   logout = () => {
     store.commonStore.setToken(null);
@@ -44,5 +44,9 @@ export default class UserStore {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  setImage = (image: string) => {
+    if (this.user) this.user.image = image;
   };
 }
