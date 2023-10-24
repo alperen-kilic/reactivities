@@ -1,18 +1,18 @@
 import { Profile } from "../../models/profile";
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import FollowButton from "./FollowButton";
 
 type Props = {
   profile: Profile;
 };
 
 const ProfileCard = ({ profile }: Props) => {
-
   function truncate(str: string | undefined) {
     if (str) {
-    return str.length > 40 ? str.substring(0, 37) + '...' : str;
+      return str.length > 40 ? str.substring(0, 37) + "..." : str;
     }
-    }
+  }
 
   return (
     <Card as={Link} to={`/profiles/${profile.username}`}>
@@ -23,8 +23,9 @@ const ProfileCard = ({ profile }: Props) => {
       </Card.Content>
       <Card.Content extra>
         <Icon name="user" />
-        20 followers
+        {profile.followersCount} followers
       </Card.Content>
+      <FollowButton profile={profile} />
     </Card>
   );
 };
