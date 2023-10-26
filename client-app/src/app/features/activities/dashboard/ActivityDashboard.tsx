@@ -3,7 +3,6 @@ import ActivityList from "./ActivityList";
 import { useStore } from "../../../stores/store";
 import { observer } from "mobx-react-lite";
 import { useEffect, useState } from "react";
-import LoadingComponent from "../../../layout/LoadingComponent";
 import ActivityFilters from "./ActivityFilters";
 import { PagingParams } from "../../../models/pagination";
 import InfiniteScroll from "react-infinite-scroller";
