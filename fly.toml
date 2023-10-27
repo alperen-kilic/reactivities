@@ -1,0 +1,23 @@
+# fly.toml app configuration file generated for aklc-reactivities on 2023-10-27T09:40:29+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "aklc-reactivities"
+primary_region = "ams"
+
+[build]
+  image = "alperenkilic97/reactivities:latest"
+
+[env]
+  ASPNETCORE_URLS="http://+:8080"
+  Cloudinary__CloudName="dsukjmz7q"
+  Cloudinary__ApiKey="134513526792311"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
