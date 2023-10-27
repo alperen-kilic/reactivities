@@ -1,13 +1,17 @@
-# fly.toml app configuration file generated for aklc-reactivities on 2023-10-27T09:40:29+03:00
+# fly.toml app configuration file generated for akilic-reactivities on 2023-10-27T11:54:02+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "aklc-reactivities"
+app = "akilic-reactivities"
 primary_region = "ams"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
 
 [build]
-  image = "alperenkilic97/reactivities:latest"
+  image = "alperenkilic97/reactivities-revamped:latest"
 
 [env]
   ASPNETCORE_URLS="http://+:8080"

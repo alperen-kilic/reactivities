@@ -38,7 +38,7 @@ namespace Application.Profiles
 
         if (request.Predicate == "past")
         {
-          query = query.Where(a => a.Date <= DateTime.Now);
+          query = query.Where(a => a.Date <= DateTime.UtcNow);
         }
 
         else if (request.Predicate == "hosting")
@@ -47,7 +47,7 @@ namespace Application.Profiles
         }
         else
         {
-          query = query.Where(a => a.Date >= DateTime.Now);
+          query = query.Where(a => a.Date >= DateTime.UtcNow);
         }
 
         var activities = await query.ToListAsync(cancellationToken);
