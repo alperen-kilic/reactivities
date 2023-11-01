@@ -18,6 +18,7 @@ processes = []
   Cloudinary__CloudName="dsukjmz7q"
   Cloudinary__ApiKey="134513526792311"
   Facebook__AppId="1047529889773805"
+  Sendgrid__User="reactivities"
 
 [http_service]
   internal_port = 8080
