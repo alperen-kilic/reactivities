@@ -22,15 +22,12 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: alperenkilic97/reactivities:latest
+          tags: alperenkilic97/reactivities-revamped:latest
   deploy:
     needs: docker
     name: Deploy app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: main
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
