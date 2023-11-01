@@ -37,7 +37,6 @@ const HomePage = () => {
               appId="1047529889773805"
               onSuccess={(response: SuccessResponse) => {
                 userStore.facebookLogin(response.accessToken);
-                console.log("Login success", response);
               }}
               onFail={(response: FailResponse) => {
                 console.log("Login Failed!", response);
